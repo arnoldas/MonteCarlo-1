@@ -1,7 +1,14 @@
 #include <iostream>
 #include <cstdlib>
+#include <cmath>
 
 using namespace std;
+
+double sixhump(double *x)
+{
+    double f=(4-2.1*pow(x[0],2)+pow(x[0],4)/3)*pow(x[0],2)+x[0]*x[1]+(-4+4*pow(x[1],2))*pow(x[1],2);
+    return f;
+}
 
 int main()
 {
@@ -30,5 +37,10 @@ int main()
         cout << vektorius[i]<<" "; // Vektoriaus isvedimas i ekrana
     }
     cout<<")\n";
+    cout<<"Funkcijos sixhump reiksme taske: "<<sixhump(&vektorius[0])<<endl;
+    //pasitikrinimui funkcijos reiksme minimumo taske
+    vektorius[0]=0.089842;
+    vektorius[1]=-0.712656;
+    cout<<"Funkcijos sixhump reiksme minimumo taske: "<<sixhump(&vektorius[0])<<endl;
     return 0;
 }
