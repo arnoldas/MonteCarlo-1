@@ -17,18 +17,18 @@ int main()
 
     double virsutinis_rezis, apatinis_rezis; // apsirasome intervalo rezius
 
-    cout << "Iveskite inervalo rerzius:" << endl;
+    cout << "Iveskite inervalo apatini ir virsutini rezius:" << endl;
     cin >> apatinis_rezis >> virsutinis_rezis;
-    cout << "Iveskite vektoriaus ilgi:" << endl;
+    cout << "Iveskite vektoriaus dimensija (n):" << endl;
     cin >> n;
 
     double vektorius[n];
-
+    cout<<"x = ( ";
     for(int i=0; i<n; i++)
     {
         vektorius[i] = rand() * (virsutinis_rezis - apatinis_rezis) / RAND_MAX + apatinis_rezis;
-        cout << i+1  << ". " << vektorius[i] << endl; // Vektoriaus isvedimas i ekrana
+        cout << vektorius[i]<<" "; // Vektoriaus isvedimas i ekrana
     }
-
+    cout<<")\n";
     return 0;
 }
